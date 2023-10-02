@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zmiana tekstu po kliknięciu przycisku</title>
+    <style>
+        h6{
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<fieldset>
+<h6>To jest przykładowy tekst.</h6>
+<button id="zmienTekstButton">Zmień tekst</button>
+</fieldset>
+<script>
+
+    const zmienTekstButton = document.getElementById("zmienTekstButton");
+    const h6Element = document.querySelector("h6");
+
+
+    zmienTekstButton.addEventListener("click", () => {
+
+        h6Element.innerHTML = "<i>Świetnie!</i>";
+    });
+</script>
+</body>
+</html>
