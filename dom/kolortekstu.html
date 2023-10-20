@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .table {
+            border-collapse: collapse;
+        }
+        .table td {
+            padding: 20px;
+        }
+        .table .cgold {
+            background-color: gold;
+        }
+        .table .ckhaki {
+            background-color: khaki;
+        }
+        .table .csilver {
+            background-color: silver;
+        }
+        .table .cperu {
+            background-color: peru;
+        }
+    </style>
+</head>
+<body>
+<h1>Zmień kolor tekstu</h1>
+<table class="table">
+    <tr>
+        <td class="cgold" onmouseover="changeTextColor(this)" onmouseout="resetTextColor(this)">Gold</td>
+        <td class="ckhaki" onmouseover="changeTextColor(this)" onmouseout="resetTextColor(this)">Khaki</td>
+        <td class="csilver" onmouseover="changeTextColor(this)" onmouseout="resetTextColor(this)">Silver</td>
+        <td class="cperu" onmouseover="changeTextColor(this)" onmouseout="resetTextColor(this)">Peru</td>
+    </tr>
+</table>
+
+<script src="kolor_tekstu.js"></script>
+</body>
+</html>

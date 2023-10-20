@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Formularz</title>
+</head>
+<body>
+<form id="myForm">
+    <fieldset style="border: 2px dashed magenta;">
+        <legend>Autouzupełnianie</legend>
+        <input type="hidden" data-song1="Grimes - Oblivion" data-song2="Ratty - Sunrise" data-song3="Moderat - Seamonkey">
+        <div id="songsContainer"></div>
+        <input type="button" value="Generuj pola" id="generateFieldsButton">
+    </fieldset>
+</form>
+<script src="script.js"></script>
+</body>
+</html>

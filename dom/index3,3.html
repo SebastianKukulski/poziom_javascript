@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3</title>
+</head>
+<body>
+<div>
+    //1
+    <div><textarea onfocus="this.style.backgroundColor='yellow'"></textarea></div>
+    //2
+    <p><input onblur="this.value = this.value.toUpperCase()" type="text"></p>
+    //3
+    <p><select onchange="this.style.color = this.value">
+        <option value="black">black</option>
+        <option value="brown">brown</option>
+        <option value="blue">blue</option>
+        <option value="blueviolet">blueviolet</option>
+        <option value="burlywood">burlywood</option>
+        <option value="bisque">bisque</option>
+    </select></p>
+    //4
+    <p onclick="this.style.fontSize = 'xx-large'" ondblclick="this.style.fontSize = 'medium'">Tekst przykładowy</p>
+    //5
+    <div><img src="ada.jpg" oncontextmenu="alert(this.getAttribute('src'))"></div>
+    //6
+    <div>
+        <input type="text" onkeyup="document.querySelector('#aaa3').textContent = this.value">
+        <p id="aaa3"></p>
+    </div>
+    //7
+    <h1 onmouseover="this.style.textShadow='10px 2px 5px green'" onmouseout="this.style.textShadow=''">Tekst z cieniem</h1>
+
+
+
+</div>
+</body>
+</html>

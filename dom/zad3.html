@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Okno Prompt</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<button id="promptButton">Wywołanie okna prompt</button>
+
+<script>
+    // Pobieramy element button za pomocą jego identyfikatora
+    var button = document.getElementById('promptButton');
+
+    // Dodajemy nasłuchiwanie zdarzenia click
+    button.addEventListener('click', function() {
+        // Wywołujemy okno prompt
+        var imie = prompt('Podaj swoje imię:');
+
+        // Sprawdzamy, czy zmienna imie ma jakąś wartość
+        if (imie) {
+            // Jeśli ma wartość, wyświetlamy powitanie
+            alert("Witaj " + imie);
+        } else {
+            // Jeśli nie ma wartości (użytkownik anulował), wyświetlamy odpowiedni komunikat
+            alert("Anulowałeś akcję, a okienko zwróciło " + imie);
+        }
+    });
+</script>
+
+</body>
+</html>
