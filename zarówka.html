@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>
+    <style>
+        button{
+            height: 100px;
+
+        }
+    </style>
+</head>
+<body>
+
+
+<fieldset>
+    <legend>Żarówka</legend>
+<button onclick="document.getElementById('myImage').src='zarowkaon.jpg'">Włącz</button>
+
+<img id="myImage" src="zarowkaoff.jpg" width="35%">
+
+<button onclick="document.getElementById('myImage').src='zarowkaoff.jpg'">Wyłącz</button>
+</fieldset>
+<fieldset>
+
+<input onclick="document.getElementById('myImage').src='zarowkaon.jpg'" type="radio" id="on" name="swiatlo" value="on" onchange="true">
+ <label for="on">Włączona</label>
+<input onclick="document.getElementById('myImage').src='zarowkaoff.jpg'" type="radio" id="off" name="swiatlo" value="off" onchange="false" checked>
+<label  for="off">Wyłączona </label ><br>
+    </select>
+</fieldset>
+<fieldset>
+    <label for="myCheck" onchange="true">Włączone</label>
+    <input type="checkbox" id="myCheck" onclick="myFunction()">
+</fieldset>
+<script>
+    function myFunction() {
+        var checkBox = document.getElementById("myCheck");
+        var image = document.getElementById("myImage");
+        if (checkBox.checked == true){
+            document.getElementById('myImage').src='zarowkaon.jpg';
+            document.getElementById('on').src='zarowkaon.jpg';
+            onchange(true);
+
+        } else {
+          document.getElementById('myImage').src='zarowkaoff.jpg';
+          onchange(false);
+        }
+
+
+    }
+</script>
