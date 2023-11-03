@@ -5,42 +5,55 @@
     <title>Title</title>
 </head>
 <body>
-<p id="length"></p>
-<legend>
+<fieldset>
+    <legend>Właściwość length</legend>
     <p>Jan Chryzostom Pasek z Gosławic herbu Doliwa</p>
-    <button onclick="myFunction()">Wyświetl liczbę znaków</button>
-</legend>
-<legend>
-    <p> Mikołaj kopernik - polski polihistor pochodzenia niemieckiego</p>
-    <button onclick="sliceText()">Wytnij znaki od 26 do 36</button><br><br>
-    <button onclick="sliceTextFromEnd()">Wytnij znaki od końca od 5 do 12</button>
-    <p id="demo"></p>
-</legend>
-<legend>
-    <p id="chopin">Fryderyk Franciszek Chopin - polski kompozytor i pianista</p>
-    <button onclick="sliceText1()">Wytnij znaki od 9 do 19</button><br><br>
-    <button onclick="sliceTextFromEnd()">Wytnij znaki od końca od 27 do końca</button>
-</legend>
-<script>
-    function myFunction() {
-        var text = document.querySelector("legend > p").textContent;
-        var length = text.length;
-        document.getElementById("length").textContent = "Liczba znaków: " + length;
-        alert("Liczba znaków: " + length);
-    }
+    <button type="button" id="elo">Wyświetl liczbę znaków</button>
+    <script>
+        document.getElementById("elo").addEventListener("click", function () {
+            var text = document.querySelector("p").textContent;
+            var numberOfCharacters = text.length;
+            alert("Liczba znaków: " + numberOfCharacters);
+        });
+    </script>
+</fieldset>
+<fieldset>
+    <legend>Funkcja slice()</legend>
+    <p id="text">Mikołaj Kopernik - polski polihistor pochodzenia niemieckiego</p>
+    <button type="button" id="elo1">Wytnij znaki od 26 do 36</button><br>
+    <button type="button" id="elo2">Wytnij znaki od końca: od 5 do 12</button>
+    <script>
+        document.getElementById("elo1").addEventListener("click", function () {
+            var text = document.querySelector("#text").textContent;
+            var cutText = text.slice(26, 36);
+            alert(cutText);
+        });
 
-    function sliceText() {
-        var text = document.querySelectorAll("legend > p")[1].textContent;
-        var slicedText = text.slice(26, 36);
-        alert(text.slice(26,36))
-    }
+        document.getElementById("elo2").addEventListener("click", function () {
+            var text = document.querySelector("#text").textContent;
+            var cutText = text.slice(-12, -5);
+            alert(cutText);
+        });
+    </script>
+</fieldset>
+<fieldset>
+    <legend>Funkcja substring()</legend>
+    <p id="text1">Fryderyk Franciszek Chopin - polski kompozytor i pianista</p>
+    <button type="button" id="elo3">Wytnij znaki od 9 do 19:</button><br>
+    <button type="button" id="elo4">Wytnij znaki od 27 do końca:</button>
+    <script>
+        document.getElementById("elo3").addEventListener("click", function () {
+            var text = document.querySelector("#text1").textContent;
+            var cutText = text.substring(9, 19);
+            alert(cutText);
+        });
 
-    function sliceTextFromEnd() {
-        var text = document.querySelectorAll("legend > p")[1].textContent;
-        var slicedText = text.slice(-12, -5);
-        alert(text.slice(-12, -5))
-    }
-
-</script>
+        document.getElementById("elo4").addEventListener("click", function () {
+            var text = document.querySelector("#text1").textContent;
+            var cutText = text.substring(27);
+            alert(cutText);
+        });
+    </script>
+</fieldset>
 </body>
 </html>
