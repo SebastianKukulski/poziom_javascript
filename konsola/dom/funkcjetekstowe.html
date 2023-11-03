@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="length"></p>
+<legend>
+    <p>Jan Chryzostom Pasek z Gosławic herbu Doliwa</p>
+    <button onclick="myFunction()">Wyświetl liczbę znaków</button>
+</legend>
+<legend>
+    <p> Mikołaj kopernik - polski polihistor pochodzenia niemieckiego</p>
+    <button onclick="sliceText()">Wytnij znaki od 26 do 36</button><br><br>
+    <button onclick="sliceTextFromEnd()">Wytnij znaki od końca od 5 do 12</button>
+    <p id="demo"></p>
+</legend>
+<legend>
+    <p id="chopin">Fryderyk Franciszek Chopin - polski kompozytor i pianista</p>
+    <button onclick="sliceText1()">Wytnij znaki od 9 do 19</button><br><br>
+    <button onclick="sliceTextFromEnd()">Wytnij znaki od końca od 27 do końca</button>
+</legend>
+<script>
+    function myFunction() {
+        var text = document.querySelector("legend > p").textContent;
+        var length = text.length;
+        document.getElementById("length").textContent = "Liczba znaków: " + length;
+        alert("Liczba znaków: " + length);
+    }
+
+    function sliceText() {
+        var text = document.querySelectorAll("legend > p")[1].textContent;
+        var slicedText = text.slice(26, 36);
+        alert(text.slice(26,36))
+    }
+
+    function sliceTextFromEnd() {
+        var text = document.querySelectorAll("legend > p")[1].textContent;
+        var slicedText = text.slice(-12, -5);
+        alert(text.slice(-12, -5))
+    }
+
+</script>
+</body>
+</html>
