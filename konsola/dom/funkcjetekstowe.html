@@ -55,5 +55,18 @@
         });
     </script>
 </fieldset>
+<fieldset>
+    <legend>Funkcja replace()</legend>
+    <p>Microsoft Edge - przeglądarka internetowa firmy Microsoft</p>
+    <button type="button" id="tak5">Zastąp piersze słowo 'Microsoft' słowem 'Januszex'</button><br>
+    <button type="button" id="tak6">Zastąp słowo 'Edge' słowem 'Janusz Explorer'</button>
+    <script>
+        document.getElementById("elo5").addEventListener("click", function () {
+            var text = document.querySelector("p").textContent;
+            var numberOfCharacters = text.length;
+            alert("Liczba znaków: " + numberOfCharacters);
+        });
+    </script>
+</fieldset>
 </body>
 </html>
