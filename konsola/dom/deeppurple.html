@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<fieldset>
+    <legend>Skład Deep Purple</legend>
+    <p id="dodajtekst"> Deep Purple - brytyjski zespół rockowy, założony w 1968 roku w składzie: </p>
+    <button id="richie">Dodaj tekst: Richie Blackmore</button><br>
+    <button id="Jon">Dodaj tekst: Jon Lord</button><br>
+    <button id="nick">Dodaj tekst: Nick Simpler</button><br>
+    <button id="ian">Dodaj tekst: Ian Paice</button><br>
+    <button id="rod">Dodaj tekst: Rod Evans</button>
+    <p style="color: red">Każdy tekst ma się doklejać tylko jeden raz. Tekst raz doklejony ma zastawiac na stałe</p>
+</fieldset>
+<script>
+    var dodaneNazwiska = [];
+
+    document.getElementById("richie").addEventListener("click", function() {
+        dodajNazwisko("Richie Blackmore");
+    });
+
+    document.getElementById("Jon").addEventListener("click", function() {
+        dodajNazwisko("Jon Lord");
+    });
+
+    document.getElementById("nick").addEventListener("click", function() {
+        dodajNazwisko("Nick Simpler");
+    });
+
+    document.getElementById("ian").addEventListener("click", function() {
+        dodajNazwisko("Ian Paice");
+    });
+
+    document.getElementById("rod").addEventListener("click", function() {
+        dodajNazwisko("Rod Evans");
+    });
+
+    function dodajNazwisko(nazwisko) {
+        if (!dodaneNazwiska.includes(nazwisko)) {
+            dodaneNazwiska.push(nazwisko);
+            var akapit = document.getElementById("dodajtekst");
+            akapit.textContent += nazwisko + ", ";
+        }
+    }
+</script>
+</body>
+</html>

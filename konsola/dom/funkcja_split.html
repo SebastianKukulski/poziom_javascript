@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Split Function Example</title>
+</head>
+<body>
+<p id="ciagfibonaci">0|1|1|2|3|5|8</p>
+<button onclick="pokaz()">Utwórz tablicę liczb</button>
+
+<script>
+  function pokaz() {
+    const fibonacciNumbersString = document.getElementById('ciagfibonaci').textContent;
+    const numbersArray = fibonacciNumbersString.split('|');
+    console.log(numbersArray);
+  }
+</script>
+</body>
+</html>

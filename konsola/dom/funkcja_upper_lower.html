@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funkcja toUpperCase() i toLowerCase()</title>
+</head>
+<body>
+<p id="paragraph">Euklides z Aleksandrii (stgr. Εὐκλείδης) – grecki matematyk</p>
+<button id="uppercase">Zmień wszystkie litery na wielkie</button><br>
+<button id="lowercase">Zmień wszystkie litery na małe</button><br>
+<button id="original">Przywróć początkową wielkość znaków</button>
+
+<script>
+    const paragraph = document.getElementById("paragraph");
+
+
+    function changeToUpperCase() {
+        paragraph.textContent = paragraph.textContent.toUpperCase();
+    }
+
+
+    function changeToLowerCase() {
+        paragraph.textContent = paragraph.textContent.toLowerCase();
+    }
+
+
+    function restoreOriginal() {
+        paragraph.textContent = "Euklides z Aleksandrii (stgr. Εὐκλείδης) – grecki matematyk";
+    }
+
+
+    document.getElementById("uppercase").addEventListener("click", changeToUpperCase);
+    document.getElementById("lowercase").addEventListener("click", changeToLowerCase);
+    document.getElementById("original").addEventListener("click", restoreOriginal);
+</script>
+</body>
+</html>
