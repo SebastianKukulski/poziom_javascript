@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="kwartaly.css">
+    <title>Kwartały</title>
+    <style>
+        #miesiac, #kwartal, button {
+            border-top: 4px dotted blue;
+            border-bottom: 4px dotted blue;
+            padding: 10px;
+            width: 100%;
+            font-family: cursive ;
+        }
+        #miesiac, #kwartal{
+            text-align: center;
+
+        }
+        #miesiac{
+            background-color: #c6b6f0;
+        }
+
+        #kwartal{
+            background-color: #f4e0ff;
+        }
+
+        button {
+            border-right: none;
+            border-left: none;
+            background-color: #e1cffc;
+        }
+
+    </style>
+</head>
+<body>
+<p id="miesiac"> </p>
+<button onClick="window.location.reload(); odswiezStrone()">Odśwież stronę</button>
+<p id="kwartal"> </p>
+<script src="kwartaly.js"></script>
+</body>
+</html>
