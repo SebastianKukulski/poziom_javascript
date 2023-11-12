@@ -25,4 +25,5 @@ function odswiezStrone() {
             kwartalElement.innerHTML = "Błędny numer miesiąca";
     }
 }
-getElementById("kwartal");
+
+document.getElementById("kwartal");
