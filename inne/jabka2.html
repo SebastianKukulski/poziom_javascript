@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <style>
+    #div1, #div2 {
+      float: left;
+      width: 150px;
+      height: 125px;
+      margin: 10px;
+      padding: 10px;
+      border: 4px solid;
+      border-top: none;
+      border-color: crimson;
+    }
+  </style>
+  <script>
+    function allowDrop(ev) {
+      ev.preventDefault();
+
+    }
+
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+
+    }
+
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+
+    }
+
+  </script>
+</head>
+<body>
+
+<h1>Skrzynka #1</h1>
+
+
+<table>
+<td id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="jablko1.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="150" height="125">
+</td>
+<td id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="jablko2.jpg" draggable="true" ondragstart="drag(event)" id="drag2" width="150" height="125">
+</td>
+<td id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="jablko3.jpg" draggable="true" ondragstart="drag(event)" id="drag3" width="150" height="125">
+</td>
+<td id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="jablko4.jpg" draggable="true" ondragstart="drag(event)" id="drag4" width="150" height="125">
+</td>
+</table><br><br><br><br><br><br><br><br><br><br>
+
+<h1>Skrzynka #2</h1>
+<td id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+
+<td id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+
+<td id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+
+<td id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+
+
+</body>
+</html>
