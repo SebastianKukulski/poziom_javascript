@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dzielenie z resztą</title>
+    <style>
+        body {
+            background-color: #ebeaef;
+        }
+
+        h1 {
+            padding: 50px;
+            font-size: 50px;
+        }
+
+        h3 {
+            font-size: 35px;
+        }
+
+        h1, input {
+            background-color: #cdc8f5;
+        }
+
+        input {
+            width: 100px;
+            padding: 25px;
+            font-size: 50px;
+        }
+
+        p {
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+<h1>Dzielenie z resztą</h1>
+<h3>Podaj dwie liczby całkowite</h3>
+<input type="number" id="numer1" oninput="dzielenie()">
+<span style='font-size:100px;'>&#8758;</span>
+<input type="number" id="numer2" oninput="dzielenie()">
+<span style='font-size:100px;'>&#61;</span>
+<input type="number" id="wynik" disabled> <span style='font-size:50px;'>reszta</span>
+<input type="number" id="reszta" disabled>
+<script>
+    function dzielenie() {
+        var numer1 = document.getElementById("numer1").value;
+        var numer2 = document.getElementById("numer2").value;
+        numer1 = parseInt(numer1);
+        numer2 = parseInt(numer2);
+        if (numer2 === 0) {
+            alert("Nie można dzielić przez zero!");
+            return;
+        }
+        var wynik = Math.round(numer1 / numer2);
+        var reszta = numer1 % numer2;
+        document.getElementById("wynik").value = wynik;
+        document.getElementById("reszta").value = reszta;
+    }
+</script>
+</body>
+</html>
