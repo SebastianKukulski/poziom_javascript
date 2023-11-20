@@ -27,6 +27,3 @@ function generujLiczby() {
     }
 
 }
-function rowna{
-
-}

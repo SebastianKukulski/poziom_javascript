@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<head>
+  <style>
+    body {
+      margin: 30px;
+      display: block;
+    }
+    img {
+      height: 100px;
+    }
+
+    div.input_output {
+      display: inline-block;
+      height: 60px;
+      width: 130px;
+      color: #511bea;
+    }
+    div.frame {
+      border: 1px solid black;
+      border-radius: 10px;
+      margin: 10px 0;
+      padding: 20px;
+    }
+
+    #circle {
+      width: 130px;
+      height: 130px;
+      border: 3px solid black;
+      border-radius: 100%;
+      margin: 40px auto 0;
+      position: relative;
+    }
+
+    #hours_hand, #minutes_hand {
+      position: absolute;
+      transform-origin: center bottom;
+      bottom: 50%;
+      left: 50%;
+    }
+
+    #hours_hand {
+      width: 5px;
+      height: 40px;
+      background-color: black;
+      margin-left: -2px;
+    }
+
+    #minutes_hand {
+      width: 2px;
+      height: 55px;
+      background-color: black;
+      margin-left: -1px;
+    }
+
+  </style>
+</head>
+<body>
+<h3>Miara kata między wskazówkami zegara</h3>
+<div class="frame">
+  <p>Miarę kąta między wskazówką minutową a godzinową można obliczyć według wzoru:</p>
+  <p>
+    <img src="task_689.bmp" alt="wzór">
+  </p>
+</div>
+
+<div class="frame input_output">
+  <label for="hours_range">Godziny [0, 11]</label> <br>
+  <input id="hours_range" min="0" max="11" name="hours_range" type="range" value="0"> <br>
+  <output id="hours_output">0</output>
+</div>
+
+<div class="frame input_output">
+  <label for="minutes_range">Minuty [0, 60]</label> <br>
+  <input id="minutes_range" min="0" max="60" name="minutes_range" type="range" value="0"> <br>
+  <output id="minutes_output">0</output>
+</div>
+
+<div id="circle">
+  <div id="hours_hand" class="hand" style="transform: rotate(0deg);"></div>
+  <div id="minutes_hand" class="hand" style="transform: rotate(0deg);"></div>
+</div>
+
+<div class="frame input_output">
+  <label for="angle">Kąt</label> <br>
+  <output id="angle">0°</output>
+</div>
+<script src="kat_miedzy_wskazowkami.js"></script>
+</body>
+</html>
