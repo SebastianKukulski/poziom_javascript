@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<fieldset>
+    <p>Znajdź liczby palidroniczne, czyli takie które przy czytaniu z lewej do prawej i odwrotnie są jednakowe</p>
+
+
+
+      <div>
+          <input type="radio" name="size" value="dwucyfrowe" id="dwucyfrowe">
+          <label for="dwucyfrowe">dwucyfrowe</label>
+      </div>
+      <div>
+          <input type="radio" name="size" value="trzycyfrowe" id="trzycyfrowe">
+          <label for="trzycyfrowe">trzycyfrowe</label>
+      </div>
+      <div>
+          <input type="radio" name="size" value="czterocyfrowe" id="czterocyfrowe">
+          <label for="czterocyfrowe">czterocyfrowe</label>
+      </div>
+      <div>
+          <input type="radio" name="size" value="pięciocyfrowe" id="pieciocyfrowe">
+          <label for="pieciocyfrowe">pięciocyfrowe</label>
+      </div>
+
+      <p>
+          <button id="btn">Znajdź</button>
+      </p>
+
+      <p id="output"></p>
+
+
+    <fieldset style="border: dashed 1px">
+        <legend >Liczby palindroniczne /???/</legend>
+    </fieldset>
+    <p>Liczb palindronicznyche ???</p>
+
+
+</fieldset>
+<script>
+    const btn = document.querySelector('#btn');
+    const radioButtons = document.querySelectorAll('input[name="size"]');
+    btn.addEventListener("click", () => {
+        let selectedSize;
+        for (const radioButton of radioButtons) {
+            if (radioButton.checked) {
+                selectedSize = radioButton.value;
+                break;
+            }
+        }
+
+        output.innerText = selectedSize ? `Liczb polidronicznych  ${selectedSize} jest.` : `jest`;
+        console.log(selectedSize)
+    });
+</script>
+</body>
+</html>
