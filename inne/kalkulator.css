@@ -1,0 +1,29 @@
+table {
+    border: gray inset;
+
+}
+td, tr{
+    border: #252222 1px  inset;
+
+}
+.reset{
+    background-color: crimson;
+    color: white;
+}
+.liczba{
+    background-color: darkgray;
+    color: white;
+}
+.znaki{
+    background-color: white;
+}
+.rownasie{
+    background-color: white;
+
+    width: 55px;
+
+}
+#dzialanie{
+    background: darkgray;
+    color: black;
+}

@@ -1,8 +1,15 @@
-console.log("imie");
-console.log("404")
-console.log(window)
-console.group("bulbulator")
-console.log("1szy tekst")
-console.log("2gitekst")
-console.log("3citekst")
-console.groupEnd();
+function showPalindromes(start, end) {
+    const resultDiv = document.getElementById('result');
+    const counterLabel = document.getElementById('counter');
+
+    const palindromes = [];
+    for (let i = start; i <= end; i++) {
+        if (i.toString() === i.toString().split('').reverse().join('')) {
+            palindromes.push(i);
+        }
+    }
+
+    counterLabel.textContent = `Liczb palindromicznych jest: ${palindromes.length}`;
+
+    resultDiv.innerHTML = `<p>${palindromes.join(', ')}</p>`;
+}
