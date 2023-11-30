@@ -1,41 +1,26 @@
-document.addEventListener("DOMContentLoaded", function() {
+let currentOperation = '';
 
-    let dzialanieEkran = document.getElementById("dzialanie");
-    let wynikEkran = document.getElementById("wynik");
-    let aktualneDzialanie = "";
-    let aktualnyWynik = "";
+function addToOperation(value) {
+    currentOperation += value;
+    updateDisplay();
+}
 
+function resetOperation() {
+    currentOperation = '';
+    updateDisplay();
+}
 
-    function dodajZnak(znak) {
-        aktualneDzialanie += znak;
-        dzialanieEkran.textContent = aktualneDzialanie;
+function updateDisplay() {
+    document.getElementById('dzialanie').textContent = currentOperation;
+}
+
+function calculate() {
+    try {
+        const result = eval(currentOperation);
+        document.getElementById('wynik').textContent = result;
+    } catch (error) {
+        document.getElementById('wynik').textContent = 'Błąd';
     }
+}
 
-   
-    function obliczWynik() {
-        try {
-            aktualnyWynik = eval(aktualneDzialanie);
-            wynikEkran.textContent = aktualnyWynik;
-        } catch (error) {
-            wynikEkran.textContent = "Błąd";
-        }
-    }
-
-    document.querySelectorAll(".liczba, .znaki").forEach(function(button) {
-        button.addEventListener("click", function() {
-            dodajZnak(button.textContent);
-        });
-    });
-
-    document.getElementById("=").addEventListener("click", function() {
-        obliczWynik();
-    });
-
-  
-    document.getElementById("reset").addEventListener("click", function() {
-        aktualneDzialanie = "";
-        aktualnyWynik = "";
-        dzialanieEkran.textContent = "/";
-        wynikEkran.textContent = "/";
-    });
-});
+document.getElementById('=').addEventListener('click', calculate);
