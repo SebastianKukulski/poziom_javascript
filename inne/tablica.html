@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="myFunction()">Pętla for (JS) + 1 2 3 (HTML)</button>
+<button onclick="myFunction2()">Pętla for of (JS) + lista a b c (HTML)</button>
+<button onclick="myFunction3()">Pętla forEach (JS) + lista 1 2 3 (HTML)</button>
+<ul id="demo"></ul>
+<script>
+
+
+
+function myFunction() {
+    const tab2 = ["Niedźwiedź", "Nietoperz", "Łasica", "Żubr", "Dzięcioł", "Łoś"];
+    let list = document.getElementById("demo");
+    let ol = document.createElement('ol');
+    ol.type="1";
+    for (i = 0; i < tab2.length; ++i) {
+        let li = document.createElement('li');
+        li.innerText = tab2[i];
+        ol.appendChild(li);
+    }
+    list.appendChild(ol)
+}
+function myFunction2() {
+    const tab2 = ["Niedźwiedź", "Nietoperz", "Łasica", "Żubr", "Dzięcioł", "Łoś"];
+    let list = document.getElementById("demo");
+    let ol = document.createElement('ol');
+    ol.type="a";
+    for (i = 0; i < tab2.length; ++i) {
+        let li = document.createElement('li');
+        li.innerText = tab2[i];
+        ol.appendChild(li);
+    }
+    list.appendChild(ol)
+
+}
+function myFunction3() {
+    const tab2 = ["Niedźwiedź", "Nietoperz", "Łasica", "Żubr", "Dzięcioł", "Łoś"];
+    let list = document.getElementById("demo");
+    let ol = document.createElement('ol');
+    ol.type="";
+    for (i = 0; i < tab2.length; ++i) {
+        let li = document.createElement('li');
+        li.innerText = tab2[i];
+        ol.appendChild(li);
+    }
+    list.appendChild(ol)
+
+}
+
+
+
+</script>
+</body>
+</html>
