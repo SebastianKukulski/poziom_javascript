@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            font-family: Calibri;
+            font-size: 16px;
+        }
+        .square {
+
+
+        }
+        .border{
+            padding: 30px;
+           border: red 15px double;
+        }
+        button, .square{
+            width:200px;
+            height: 200px;
+            background-color: greenyellow;
+            border: solid 1px;
+            float: left;
+            margin: 20px;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="border">
+<fieldset>
+<div>
+    <div><button onclick="myFunction()">Orginalna linia imion</button> </div>
+    <div><button onclick="myFunction2()">Wszystkie litery małe</button></div>
+    <div><button>Pierwsza litera mała</button></div>
+    <div><button onclick="myFunction">Tyle gwiazdek co liter</button></div>
+</div>
+</fieldset>
+    <ul id="demo"></ul>
+</div>
+<script>
+    function myFunction() {
+        const tab2 = ["Marcin", "Ania", "Marysia", "Maciej", "Kasia", "Andrzej"];
+        let list = document.getElementById("demo");
+        let ol = document.createElement('ol');
+        ol.type="1";
+        ol.style.height="130px";
+        ol.style.width="80px";
+        ol.style.backgroundColor="lightblue";
+        ol.style.border="solid blue 1px";
+        for (i = 0; i < tab2.length; ++i) {
+            let li = document.createElement('li');
+            li.innerText = tab2[i];
+            ol.appendChild(li);
+        }
+        list.appendChild(ol)
+    }
+    function myFunction2() {
+
+        const tab2 = ["Marcin", "Ania", "Marysia", "Maciej", "Kasia", "Andrzej"];
+        let list = document.getElementById("demo");
+        let ol = document.createElement('ol');
+
+        ol.type="1";
+        ol.style.height="130px";
+        ol.style.width="80px";
+        ol.style.backgroundColor="lightblue";
+        ol.style.border="solid blue 1px";
+
+        for (i = 0; i < tab2.length; ++i) {
+            let li = document.createElement('li');
+            li.innerText = tab2[i].toLowerCase();
+            ol.appendChild(li);
+        }
+        list.appendChild(ol)
+    }
+</script>
+</body>
+</html>
